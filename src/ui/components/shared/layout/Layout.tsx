@@ -5,7 +5,7 @@ import { RobotoCondensed } from '@/public/fonts';
 export const Layout = ({ children }: LayoutModel) => {
  return (
   <Fragment>
-   <main className={`${RobotoCondensed.variable} dark-theme`}>{children}</main>
+   <main className={`${RobotoCondensed.variable} light-theme`}>{children}</main>
   </Fragment>
  );
 };

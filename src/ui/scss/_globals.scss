@@ -1,11 +1,12 @@
 * {
  box-sizing: border-box;
+ border: none;
  font-family: var(--font-robotoCondensed);
  list-style: none;
  margin: 0;
  padding: 0;
  scroll-behavior: smooth;
- scroll-margin-top: $mrg-fifthe;
+ scroll-padding-top: $mrg-fifthe;
  text-decoration: none;
 }
 
@@ -26,9 +27,9 @@ p {
 main {
  left: 0;
  min-height: 100vh;
- margin-top: $mrg-fifthe;
  position: absolute;
  padding: 0 $pad-base;
+ padding-top: $mrg-fifthe;
  top: 0;
  width: 100%;
 
@@ -36,6 +37,41 @@ main {
   background-color: $background-button;
  }
 
- @include dark-theme;
  @include light-theme;
+ @include dark-theme;
+}
+
+// Theme Test Styles
+section,
+div {
+ border-radius: 5px;
+ margin-bottom: $mrg-double;
+ position: relative;
+ padding: $pad-base;
+ text-align: center;
+ width: 100%;
+}
+
+section {
+ img {
+  height: 250px;
+  width: 250px;
+ }
+
+ div {
+  display: flex;
+  justify-content: center;
+  margin-top: $mrg-half;
+  margin-bottom: 0;
+
+  button {
+   border-radius: 5px;
+   color: #ededed;
+   cursor: pointer;
+   font-size: toRem(1);
+   font-weight: 500;
+   margin: 0 $mrg-half;
+   padding: $pad-quarter $pad-base;
+  }
+ }
 }

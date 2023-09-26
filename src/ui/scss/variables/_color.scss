@@ -2,21 +2,22 @@
 $dark-background-primary: #0d161c;
 $dark-background-secondary: #111b22;
 $dark-background-tertiary: #17232b;
-$dark-background-fourth: #2c3a47;
+$dark-background-fourth: rgba(#26323d, 0.2);
 $dark-title-primary: #fcfdfd;
-$dark-title-secondary: #35a9fd;
+$dark-title-secondary: #0a74c0;
 $dark-text-primary: #e9e9e9;
-$dark-text-secondary: #35a9fd;
+$dark-text-secondary: #0a74c0;
 
 // Colors of the light theme
 $light-background-primary: #fcfdfd;
-$light-background-secondary: #6a89cc;
-$light-background-tertiary: #747d8c;
-$light-background-fourth: #a4b0be;
+$light-background-secondary: rgba(#0d161c, 0.15);
+$light-background-tertiary: rgba(#111b22, 0.1);
+$light-background-fourth: rgba(#70a1ff, 0.15);
 $light-title-primary: #222222;
-$light-title-secondary: #35a9fd;
+$light-title-secondary: #0a74c0;
 $light-text-primary: #222222;
-$light-text-secondary: #35a9fd;
+$light-text-secondary: #0a74c0;
 
 // Default Colors
 $background-button: #258bd4;
+$background-button-hover: #35a9fd;
