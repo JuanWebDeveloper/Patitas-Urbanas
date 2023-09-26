@@ -1,1 +1,1 @@
-export { UISlice } from './ui/UiSlice';
+export { UISlice, onToggleTheme } from './ui/UISlice';

@@ -9,7 +9,12 @@ const initialState: UISliceModel = {
 const UISlice = createSlice({
  name: 'UI',
  initialState,
- reducers: {},
+ reducers: {
+  onToggleTheme: (state: UISliceModel, { payload }: { payload: boolean }) => {
+   state.theme = payload;
+  },
+ },
 });
+const { onToggleTheme } = UISlice.actions;
 
-export { UISlice };
+export { UISlice, onToggleTheme };

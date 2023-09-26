@@ -1,18 +1,23 @@
 import { Fragment } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
+import { useSelectorState, useUIStore } from '@/src/core/hooks';
 
 const HomePage = () => {
+ const { theme } = useSelectorState((state) => state.ui);
+ const { toggleTheme } = useUIStore();
+
  return (
   <Fragment>
-   <Head>
-    <link rel='shortcut icon' href={`/images/favicon-light.png`} type='image/x-icon' />
-   </Head>
    <section>
-    <Image src={`/images/logo-light.png`} width={512} height={512} alt={`Logo for the dark theme of Code Whisperers `} />
+    <Image
+     src={`/images/logo-${theme ? 'dark' : 'light'}.png`}
+     width={512}
+     height={512}
+     alt={`Logo for the ${theme ? 'dark' : 'light'} theme`}
+    />
     <div>
-     <button>Dark</button>
-     <button>Light</button>
+     <button onClick={() => toggleTheme(true)}>Dark</button>
+     <button onClick={() => toggleTheme(false)}>Light</button>
     </div>
    </section>
 
