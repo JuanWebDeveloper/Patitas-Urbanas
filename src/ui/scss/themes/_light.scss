@@ -1,0 +1,24 @@
+@mixin light-theme {
+ &.light-theme {
+  background-color: $light-background-primary;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+   color: $light-title-primary;
+
+   span {
+    color: $light-title-secondary;
+   }
+  }
+
+  p {
+   color: $light-text-primary;
+
+   span {
+    color: $light-text-secondary;
+   }
+  }
+ }
+}

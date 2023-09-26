@@ -35,4 +35,7 @@ main {
  button {
   background-color: $background-button;
  }
+
+ @include dark-theme;
+ @include light-theme;
 }

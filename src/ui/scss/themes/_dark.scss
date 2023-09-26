@@ -1,0 +1,24 @@
+@mixin dark-theme {
+ &.dark-theme {
+  background-color: $dark-background-primary;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+   color: $dark-title-primary;
+
+   span {
+    color: $dark-title-secondary;
+   }
+  }
+
+  p {
+   color: $dark-text-primary;
+
+   span {
+    color: $dark-text-secondary;
+   }
+  }
+ }
+}
