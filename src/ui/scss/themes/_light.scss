@@ -21,19 +21,5 @@
     color: $light-text-secondary;
    }
   }
-
-  //*> Custom Classes for Light Theme
-  //*> Custom Classes for Dark Theme
-  div {
-   &:nth-child(2) {
-    background-color: $light-background-secondary;
-   }
-   &:nth-child(3) {
-    background-color: $light-background-tertiary;
-   }
-   &:nth-child(4) {
-    background-color: $light-background-fourth;
-   }
-  }
  }
 }

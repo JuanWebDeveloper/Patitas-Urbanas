@@ -41,38 +41,3 @@ main {
  @include light-theme;
  @include dark-theme;
 }
-
-// Theme Test Styles
-section,
-div {
- border-radius: 5px;
- margin-bottom: $mrg-double;
- position: relative;
- padding: $pad-base;
- text-align: center;
- width: 100%;
-}
-
-section {
- img {
-  height: 250px;
-  width: 250px;
- }
-
- div {
-  display: flex;
-  justify-content: center;
-  margin-top: $mrg-half;
-  margin-bottom: 0;
-
-  button {
-   border-radius: 5px;
-   color: #ededed;
-   cursor: pointer;
-   font-size: toRem(1);
-   font-weight: 500;
-   margin: 0 $mrg-half;
-   padding: $pad-quarter $pad-base;
-  }
- }
-}

@@ -21,18 +21,5 @@
     color: $dark-text-secondary;
    }
   }
-
-  //*> Custom Classes for Dark Theme
-  div {
-   &:nth-child(2) {
-    background-color: $dark-background-secondary;
-   }
-   &:nth-child(3) {
-    background-color: $dark-background-tertiary;
-   }
-   &:nth-child(4) {
-    background-color: $dark-background-fourth;
-   }
-  }
  }
 }
