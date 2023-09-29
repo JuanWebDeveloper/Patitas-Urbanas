@@ -1,12 +1,16 @@
-// Icons
+//*> Icons
 @import '@fortawesome/fontawesome-svg-core/styles.css';
-// Variables
+//*> Animations Of The Project
+@import './variables/animations/index.scss';
+//*> Variables
 @import './variables/color';
 @import './variables/box';
 @import './variables/fonts';
 @import './variables/functions';
-// Themes
+@import './variables/dimensions';
+@import './variables/shadow';
+//*> Themes
 @import './themes/dark';
 @import './themes/light';
-// Global Styles
+//*> Global Styles
 @import './globals';
