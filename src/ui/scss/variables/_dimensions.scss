@@ -1,0 +1,18 @@
+//*> Main Screen Sizes
+$breakpoint-small: 576px; //*> Small mobile devices (e.g., phones)
+$breakpoint-medium: 768px; //*> Medium-sized mobile devices and vertical tablets
+$breakpoint-large: 999px; //*> Horizontal tablets and laptop screens
+$breakpoint-xlarge: 1200px; //*> Desktop screens and high-resolution computers
+$breakpoint-xxlarge: 1400px; //*> Large desktop screens and high-resolution computers
+
+//*> Main Screen Dimensions
+$screen-width-small: 320px; //*> Screen width for small mobile devices
+$screen-height-small: 480px; //*> Screen height for small mobile devices
+$screen-width-medium: 768px; //*> Screen width for medium-sized mobile devices and vertical tablets
+$screen-height-medium: 1024px; //*> Screen height for medium-sized mobile devices and vertical tablets
+$screen-width-large: 1024px; //*> Screen width for horizontal tablets and laptop screens
+$screen-height-large: 768px; //*> Screen height for horizontal tablets and laptop screens
+$screen-width-xlarge: 1280px; //*> Screen width for desktop screens and high-resolution computers
+$screen-height-xlarge: 800px; //*> Screen height for desktop screens and high-resolution computers
+$screen-width-xxlarge: 1440px; //*> Screen width for large desktop screens and high-resolution computers
+$screen-height-xxlarge: 900px; //*> Screen height for large desktop screens and high-resolution computers
