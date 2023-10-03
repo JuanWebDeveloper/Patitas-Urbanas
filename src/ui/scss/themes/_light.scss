@@ -21,5 +21,37 @@
     color: $light-text-secondary;
    }
   }
+  //*>  Navbar Styles For The Light Theme
+  .navbar {
+   .hamburger {
+    .bar {
+     background-color: $light-title-primary;
+    }
+   }
+
+   .navigation {
+    li {
+     color: $light-title-primary;
+
+     &::after {
+      background-color: rgba(darken($light-background-primary, 30), 0.8);
+     }
+
+     &:hover::before {
+      box-shadow: 0px 5px 0px rgba($light-title-tertiary, 0.9);
+     }
+    }
+
+    @media (max-width: $breakpoint-large) {
+     background-color: rgba(darken($light-background-primary, 5), 0.8);
+    }
+   }
+
+   &.in-scrolling {
+    background-color: rgba($light-background-primary, $alpha: 0.95);
+    box-shadow: $shadow-navbar-light;
+    height: 65px;
+   }
+  }
  }
 }
