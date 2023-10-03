@@ -1,24 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect, Dispatch } from 'react';
 import Image from 'next/image';
 import { useSelectorState, useUIStore } from '@/src/core/hooks';
+import { handleNavbarScrollAnimation, handleNavbarMobile } from '@/src/core/helpers';
 
 export const Navbar = () => {
  const { theme } = useSelectorState((state) => state.ui);
  const { toggleTheme } = useUIStore();
  const [isScrolling, setIsScrolling] = useState(false);
 
+ //*> Manages the navbar animation in response to page scrolling.
+ useEffect(() => {
+  handleNavbarScrollAnimation(setIsScrolling);
+  window.addEventListener('scroll', () => handleNavbarScrollAnimation(setIsScrolling));
+ }, []);
+
  return (
   <div className={`navbar ${isScrolling ? 'in-scrolling' : ''}`}>
    <div className='logo'>
-    <Image
-     src={`/images/logo-${theme ? 'dark' : 'light'}.png`}
-     width={2560}
-     height={2560}
-     alt={`Logo de Patitas Urbanas tema ${theme ? 'oscuro' : 'claro'}`}
-    />
+    <Image src={`/images/logo.png`} width={2560} height={2560} alt={`Logo de Patitas Urbanas`} />
    </div>
 
-   <div className='hamburger'>
+   <div className='hamburger' onClick={() => handleNavbarMobile(setIsScrolling)}>
     <div className='bar'></div>
     <div className='bar'></div>
     <div className='bar'></div>
@@ -32,6 +34,7 @@ export const Navbar = () => {
      <li>Donaciones</li>
      <li>Tienda</li>
      <li>Contacto</li>
+
      <div className='toggle-theme'>
       <div className={`${!theme ? 'active-theme' : 'inactive-theme'}`} onClick={() => toggleTheme(true)}>
        <Image src={`/images/moon-icon.png`} width={800} height={800} alt={`Icono de la Luna para el tema oscuro`} />
