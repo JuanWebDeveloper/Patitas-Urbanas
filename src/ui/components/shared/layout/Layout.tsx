@@ -10,7 +10,7 @@ export const Layout = ({ children }: LayoutModel) => {
  const { theme } = useSelectorState((state) => state.ui);
 
  <Head>
-  <link rel='shortcut icon' href={`/images/favicon-${theme ? 'dark' : 'light'}.png`} type='image/x-icon' />
+  <link rel='shortcut icon' href='images/favicon.png' type='image/x-icon' />
  </Head>;
  return (
   <Fragment>

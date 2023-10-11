@@ -2,6 +2,10 @@ import { useState, useEffect, Dispatch } from 'react';
 import Image from 'next/image';
 import { useSelectorState, useUIStore } from '@/src/core/hooks';
 import { handleNavbarScrollAnimation, handleNavbarMobile } from '@/src/core/helpers';
+// Import Navbar Images
+import Logo from '@/public/images/logo.png';
+import MoonIcon from '@/public/images/moon-icon.png';
+import SunIcon from '@/public/images/sun-icon.png';
 
 export const Navbar = () => {
  const { theme } = useSelectorState((state) => state.ui);
@@ -17,7 +21,7 @@ export const Navbar = () => {
  return (
   <div className={`navbar ${isScrolling ? 'in-scrolling' : ''}`}>
    <div className='logo'>
-    <Image src={`/images/logo.png`} width={2560} height={2560} alt={`Logo de Patitas Urbanas`} />
+    <Image src={Logo} width={2560} height={2560} alt={`Logo de Patitas Urbanas`} />
    </div>
 
    <div className='hamburger' onClick={() => handleNavbarMobile(setIsScrolling)}>
@@ -37,10 +41,10 @@ export const Navbar = () => {
 
      <div className='toggle-theme'>
       <div className={`${!theme ? 'active-theme' : 'inactive-theme'}`} onClick={() => toggleTheme(true)}>
-       <Image src={`/images/moon-icon.png`} width={800} height={800} alt={`Icono de la Luna para el tema oscuro`} />
+       <Image src={MoonIcon} width={800} height={800} alt={`Icono de la Luna para el tema oscuro`} />
       </div>
       <div className={`${theme ? 'active-theme' : 'inactive-theme'}`} onClick={() => toggleTheme(false)}>
-       <Image src={`/images/sun-icon.png`} width={360} height={360} alt={`Icono del Sol para el tema claro`} />
+       <Image src={SunIcon} width={360} height={360} alt={`Icono del Sol para el tema claro`} />
       </div>
      </div>
     </ul>
